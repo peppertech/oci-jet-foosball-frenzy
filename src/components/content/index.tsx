@@ -118,7 +118,8 @@ export function Content() {
         {(layoutPattern === "start" || layoutPattern === "both") && (
           <div
             id="leftClock"
-            class="oj-flex-bar-start oj-sm-3 oj-sm-margin-2x-left clock-event-panel-left">
+            class="oj-flex-bar-start oj-sm-3 oj-sm-margin-2x-left clock-event-panel-left"
+          >
             <div class="oj-flex-item oj-sm-flex-items-initial oj-sm-align-items-center clock-event-container">
               <Clock
                 eventTime={eventTime}
@@ -132,7 +133,8 @@ export function Content() {
         {layoutPattern === "middle" && (
           <div
             id="middleClock"
-            class="oj-flex-bar-middle oj-sm-6 clock-event-panel-middle oj-sm-align-items-center">
+            class="oj-flex-bar-middle oj-sm-6 clock-event-panel-middle oj-sm-align-items-center"
+          >
             <div class="oj-flex-item oj-sm-flex-items-initial oj-sm-align-items-center clock-event-container">
               <Clock
                 eventTime={eventTime}
@@ -147,7 +149,8 @@ export function Content() {
         {(layoutPattern === "end" || layoutPattern === "both") && (
           <div
             id="rightClock"
-            class="oj-flex-bar-end oj-sm-3 oj-sm-margin-2x-right clock-event-panel-right">
+            class="oj-flex-bar-end oj-sm-3 oj-sm-margin-2x-right clock-event-panel-right"
+          >
             <div class="oj-flex-item oj-sm-flex-items-initial oj-sm-align-items-center clock-event-container">
               <Clock
                 eventTime={eventTime}
@@ -160,13 +163,22 @@ export function Content() {
         )}
         <MyContext.Provider value={drawerContext}>
           <span>
+            <div class="oj-panel video-container">
+              <video
+                class="video-layout"
+                autoplay
+                controls
+                src="\styles\videos\JavaProgramming_ABriefLecture.mp4"
+              ></video>
+            </div>
             <oj-drawer-popup
               ref={drawerPopupRef}
               class="clock-drawer-end"
               edge="end"
               opened={endOpened}
               onojBeforeClose={resetDrawerState}
-              autoDismiss="focus-loss">
+              autoDismiss="focus-loss"
+            >
               <div class="clock-drawer-container">
                 <div class="oj-flex-bar clock-drawer-header">
                   <h1 class="oj-flex-bar-start oj-typography-heading-lg">
@@ -178,10 +190,12 @@ export function Content() {
                     display="icons"
                     chroming="borderless"
                     class="oj-flex-bar-end"
-                    onojAction={resetDrawerState}>
+                    onojAction={resetDrawerState}
+                  >
                     <span
                       slot="startIcon"
-                      class="oj-ux-ico-close clock-drawer-text-color"></span>
+                      class="oj-ux-ico-close clock-drawer-text-color"
+                    ></span>
                     Close
                   </oj-button>
                 </div>
@@ -207,7 +221,8 @@ export function Content() {
               role="img"
               class="oj-icon clock-oracle-icon"
               title="powered by oracle cloud"
-              alt="Powered by Oracle Cloud logo"></div>
+              alt="Powered by Oracle Cloud logo"
+            ></div>
           </button>
         </div>
       </div>

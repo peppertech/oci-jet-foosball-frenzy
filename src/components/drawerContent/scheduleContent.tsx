@@ -231,7 +231,8 @@ export function ScheduleContent(props: Props) {
             onojAction={deleteEvent}
             label="Remove"
             class="oj-flex-bar-end"
-            data-oj-clickthrough="disabled">
+            data-oj-clickthrough="disabled"
+          >
             <span slot="startIcon" class="oj-ux-ico-close"></span>
           </oj-button>
         </div>
@@ -257,7 +258,8 @@ export function ScheduleContent(props: Props) {
           labelHint="Auto-load schedule"
           labelEdge="inside"
           value={autoLoad}
-          onvalueChanged={updateAutoLoad}></oj-switch>
+          onvalueChanged={updateAutoLoad}
+        ></oj-switch>
       </oj-form-layout>
       <oj-list-view
         ref={listAreaRef}
@@ -266,7 +268,8 @@ export function ScheduleContent(props: Props) {
         gridlines={{ item: "visibleExceptLast" }}
         selected={selectedEvent}
         onselectedChanged={selectedChangedHandler}
-        class="clock-listview-sizing">
+        class="clock-listview-sizing"
+      >
         <template slot="itemTemplate" render={listItemTemplate}></template>
         <template slot="noData" render={noDataTemplate}></template>
       </oj-list-view>
@@ -285,21 +288,23 @@ export function ScheduleContent(props: Props) {
             help={{
               instruction: "Event names must not contain a dash (-)",
             }}
-            onvalueChanged={updateNameVal}></oj-input-text>
+            onvalueChanged={updateNameVal}
+          ></oj-input-text>
           <oj-form-layout direction="row" columns={2}>
             <oj-input-date
               aria-label="event start date"
               labelHint="Event date"
               value={newEventDate}
               required
-              onvalueChanged={updateNewEventDate}></oj-input-date>
+              onvalueChanged={updateNewEventDate}
+            ></oj-input-date>
             <oj-input-time
               aria-label="event start time"
               labelHint="Event time"
               value={newEventTime}
               timePicker={{
                 showOn: "focus",
-                timeIncrement: "5",
+                timeIncrement: "00:05:00:000",
                 footerLayout: "",
               }}
               converter={timeConverter}
@@ -307,7 +312,8 @@ export function ScheduleContent(props: Props) {
               help={{
                 instruction: "Required format HH:MM (24-hour clock)",
               }}
-              onvalueChanged={updateNewEventTime}></oj-input-time>
+              onvalueChanged={updateNewEventTime}
+            ></oj-input-time>
           </oj-form-layout>
           <oj-button onojAction={addEvent} label="Add event"></oj-button>
         </oj-form-layout>
@@ -323,7 +329,8 @@ export function ScheduleContent(props: Props) {
             instruction:
               'paste array of objects in the format of {"name":"my event", "startTime":"YYYY-MM-DDTHH:MM:SS"}',
           }}
-          onvalueChanged={updateScheduleVal}></oj-text-area>
+          onvalueChanged={updateScheduleVal}
+        ></oj-text-area>
         <oj-button onojAction={importSchedule} label="Import"></oj-button>
       </oj-form-layout>
     </>

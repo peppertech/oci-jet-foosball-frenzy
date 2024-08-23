@@ -25,6 +25,25 @@
   --oj-core-text-color-primary: var(--clock-ocean190);
 }
 
+.oj-web-applayout-body {
+  overflow: hidden;
+}
+
+.video-container {
+  width: 74vw;
+  height: 100%;
+  margin-top: 20px;
+  z-index: 5;
+}
+.video-layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 99%;
+  height: 99%;
+  overflow: hidden;
+}
+
 button.addbtn {
   border: none;
 }
@@ -240,7 +259,8 @@ button.addbtn2:focus-visible {
   height: 89%;
   margin: auto;
   padding-top: 10vh;
-  content: url(images/jet-logo.png);
+  content: url(images/image_fx_2.jpg);
+  /* content: url(images/jet-logo.png); */
 }
 
 .clock-tag-icon:before {

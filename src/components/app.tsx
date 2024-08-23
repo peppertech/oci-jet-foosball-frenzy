@@ -10,7 +10,7 @@ export const App = registerCustomElement("app-root", () => {
   }, []);
 
   return (
-    <div id="appContainer" class="oj-web-applayout-page">
+    <div id="appContainer">
       <Content />
     </div>
   );
