@@ -1,10 +1,12 @@
-# oci-jet-garage-clock
+# IN DEVELOPMENT
+
+# oci-jet-foosball-frenzy
 
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_oci-jet-garage-clock)](https://sonarcloud.io/dashboard?id=oracle-devrel_oci-jet-garage-clock)
 
 ## Introduction
 This step-by-step tutorial focuses on deploying a Preact and JET client-side application to Oracle Cloud Infrastructure (OCI) using Docker. Docker enables lightweight and efficient container instances that eliminate server management, and OCI enables worldwide accessibility. The guide walks you through building a Docker image, pushing it to a Docker registry, and creating a container instance on OCI using the Docker image.
-![app home](doc/images/appHome.png)  
+![app home]()  
 
 ## Getting Started - Deploy Oracle JET app to the Container Instances
 ### Compile and push your image  
